@@ -1,0 +1,21 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Contacto{% endblock title %}
+{% block body%}
+<div class="container">
+    <div class="row my-5">
+        <div class="col-md-6 offset-md-3">
+            <form action="#" method="POST">{% csrf_token %}
+                <h1>Formulario de contacto</h1>
+                {{form}}
+                <div class="form-group my-2">
+                    <button type="submit" class="btn btn-success btn-block text-white">Enviar</button>
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body%}
+{% block js_block %}
+<script src=" {% static 'js/contacto.js'%}"></script>
+{% endblock %}

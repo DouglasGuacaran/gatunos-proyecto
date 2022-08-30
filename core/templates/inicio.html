@@ -1,0 +1,110 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block stylecss %}<link rel="stylesheet" href="{% static 'css/inicio.css' %}">{% endblock stylecss %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="row carrousel">
+    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible close">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong class="text-dark" {% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }}</strong>
+            </div>
+            {% endfor %}
+        </ul>
+        {% endif %} 
+    </div>
+    <div class="col text-center">
+        <h1 class="title">Algunos de nuestros rescates</h1>
+    </div>
+    <div class="owl-carousel">
+            <div class="item">
+                <img src="{% static 'img/cat1.jpg' %}" alt="cat1">
+                <h5 class="description">Tom</h5>
+                <h6 class="description">Gatito de raza americano</h6>
+                <h6 class="description"> 5 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat2.jpg' %}" alt="cat2">
+                <h5 class="description">Gardfield</h5>
+                <h6 class="description">Gatita de raza americano</h6>
+                <h6 class="description">10 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat3.jpg' %}" alt="cat3">
+                <h5 class="description">Micio</h5>
+                <h6 class="description">Gatito macho de raza americano</h6>
+                <h6 class="description">Desde hace 4 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat4.jpg' %}" alt="cat4">
+                <h5 class="description">Gardfield</h5>
+                <h6 class="description">Gatita de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 5 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat5.jpg' %}" alt="cat5">
+                <h5 class="description">Oreo</h5>
+                <h6 class="description">Gatita de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 2 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat6.jpg' %}" alt="cat6">
+                <h5 class="description">Oscar</h5>
+                <h6 class="description">Gatito  de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 8 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat7.jpg' %}" alt="cat7">
+                <h5 class="description">Fluffy</h5>
+                <h6 class="description">Gatita de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 4 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat8.jpg' %}" alt="cat8">
+                <h5 class="description">Jasper</h5>
+                <h6 class="description">Gatito de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 2 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat9.jpg' %}" alt="cat9">
+                <h5 class="description">Jack</h5>
+                <h6 class="description">Gatito de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 7 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat10.jpg' %}" alt="cat10">
+                <h5 class="description">Lucky</h5>
+                <h6 class="description">Gatita de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 9 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat11.jpg' %}" alt="cat11">
+                <h5 class="description">Pearl</h5>
+                <h6 class="description">Gatita de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 15 meses con nosotros</h6>
+            </div>
+            <div class="item">
+                <img src="{% static 'img/cat12.jpg' %}" alt="cat12">
+                <h5 class="description">Luna</h5>
+                <h6 class="description">Gatita de raza americano</h6>
+                <h6 class="description">Dado en Adopción luego de 3 meses con nosotros</h6>
+            </div>
+    </div>
+</div>
+
+{% endblock body %}
+
+{% block js_block %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+<script src="{% static 'js/inicio.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+{% endblock js_block %}
